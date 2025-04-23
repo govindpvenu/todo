@@ -90,7 +90,7 @@
   --font-sans: Lora, snans-serif;
   --font-serif: "Wisteria", serif;
   --font-mono: Fira Code, monospace;
-  --radius: 0.25rem;
+  --radius: 1rem;
   --shadow-2xs: 2px 3px 5px 0px hsl(28 13% 20% / 0.06);
   --shadow-xs: 2px 3px 5px 0px hsl(28 13% 20% / 0.06);
   --shadow-sm: 2px 3px 5px 0px hsl(28 13% 20% / 0.12),
@@ -104,6 +104,7 @@
   --shadow-xl: 2px 3px 5px 0px hsl(28 13% 20% / 0.12),
     2px 8px 10px -1px hsl(28 13% 20% / 0.12);
   --shadow-2xl: 2px 3px 5px 0px hsl(28 13% 20% / 0.3);
+  --spacing: 0.3rem;
 }
 
 .dark {

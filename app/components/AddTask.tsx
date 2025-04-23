@@ -6,7 +6,7 @@ export default function AddTask() {
     <div className="*:not-first:mt-2 max-w-lg w-full">
       <div className="flex gap-2 w-full ">
         <Input className="flex-1" placeholder="Add Task" type="text" />
-        <Button variant="outline">Send</Button>
+        <Button variant="default">Send</Button>
       </div>
     </div>
   );
