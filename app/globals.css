@@ -143,7 +143,7 @@
   --font-sans: Lora, snans-serif;
   --font-serif: "Wisteria", serif;
   --font-mono: Fira Code, monospace;
-  --radius: 0.25rem;
+  --radius: 1rem;
   --shadow-2xs: 2px 3px 5px 0px hsl(28 13% 20% / 0.06);
   --shadow-xs: 2px 3px 5px 0px hsl(28 13% 20% / 0.06);
   --shadow-sm: 2px 3px 5px 0px hsl(28 13% 20% / 0.12),

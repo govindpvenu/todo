@@ -18,7 +18,7 @@ export function LogoutButton() {
     <Button
       onClick={logout}
       variant="outline"
-      className="rounded-full"
+      className="rounded-full cursor-pointer hover:scale-105 transition-transform duration-500"
       size="icon"
     >
       <LogOut />
