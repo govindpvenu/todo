@@ -14,6 +14,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
 import { useState } from "react";
+import { LoaderCircle } from "lucide-react";
 
 export function ForgotPasswordForm({
   className,
@@ -76,7 +77,7 @@ export function ForgotPasswordForm({
                   <Input
                     id="email"
                     type="email"
-                    placeholder="m@example.com"
+                    placeholder="michaelscott@example.com"
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
@@ -84,7 +85,11 @@ export function ForgotPasswordForm({
                 </div>
                 {error && <p className="text-sm text-red-500">{error}</p>}
                 <Button type="submit" className="w-full" disabled={isLoading}>
-                  {isLoading ? "Sending..." : "Send reset email"}
+                  {isLoading ? (
+                    <LoaderCircle className="animate-spin" />
+                  ) : (
+                    "Send reset email"
+                  )}
                 </Button>
               </div>
               <div className="mt-4 text-center text-sm">
