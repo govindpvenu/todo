@@ -87,8 +87,8 @@
   --sidebar-accent-foreground: oklch(0.38 0.02 64.34);
   --sidebar-border: oklch(0.86 0.03 84.59);
   --sidebar-ring: oklch(0.62 0.08 65.54);
-  --font-sans: Lora, serif;
-  --font-serif: Lora, serif;
+  --font-sans: Lora, snans-serif;
+  --font-serif: "Wisteria", serif;
   --font-mono: Fira Code, monospace;
   --radius: 0.25rem;
   --shadow-2xs: 2px 3px 5px 0px hsl(28 13% 20% / 0.06);
@@ -139,8 +139,8 @@
   --sidebar-accent-foreground: oklch(0.92 0.02 83.06);
   --sidebar-border: oklch(0.38 0.02 57.13);
   --sidebar-ring: oklch(0.73 0.06 66.7);
-  --font-sans: Lora, serif;
-  --font-serif: Lora, serif;
+  --font-sans: Lora, snans-serif;
+  --font-serif: "Wisteria", serif;
   --font-mono: Fira Code, monospace;
   --radius: 0.25rem;
   --shadow-2xs: 2px 3px 5px 0px hsl(28 13% 20% / 0.06);
