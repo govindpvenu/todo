@@ -59,7 +59,7 @@ export function SignUpForm({
   };
 
   return (
-    <div className={cn("flex flex-col gap-6", className)} {...props}>
+    <div className={cn("flex flex-col gap-4", className)} {...props}>
       <Card>
         <CardHeader>
           <CardTitle className="text-2xl">Sign up</CardTitle>
@@ -67,7 +67,7 @@ export function SignUpForm({
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSignUp}>
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-2">
               <div className="grid gap-2">
                 <Label htmlFor="email">Email</Label>
                 <Input
@@ -115,13 +115,13 @@ export function SignUpForm({
               </Button>
             </div>
           </form>
-          <div className="relative my-4 text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
+          <div className="relative my-2 text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border">
             <span className="relative z-10 bg-card  px-2 text-muted-foreground">
               Or continue with
             </span>
           </div>
           <GithubLoginButton />
-          <div className="mt-4 text-center text-sm">
+          <div className="mt-2 text-center text-sm">
             Already have an account?{" "}
             <Link href="/auth/login" className="underline underline-offset-4">
               Login
