@@ -359,7 +359,7 @@ const EditablePreview = React.forwardRef<HTMLDivElement, EditablePreviewProps>(
         const onTrigger = React.useCallback(() => {
             if (context.disabled || context.readOnly) return;
             context.onEdit();
-        }, [context.disabled, context.readOnly, context.onEdit]);
+        }, [context]);
 
         const PreviewPrimitive = asChild ? Slot : 'div';
 
@@ -441,8 +441,9 @@ const EditableInput = React.forwardRef<HTMLInputElement, EditableInputProps>(
                     target.style.width = `${target.scrollWidth + 4}px`;
                 }
             },
-            [context.autosize]
+            [context]
         );
+
         const onBlur = React.useCallback(
             (event: React.FocusEvent<InputElement>) => {
                 if (isReadOnly) return;
@@ -457,7 +458,7 @@ const EditableInput = React.forwardRef<HTMLInputElement, EditableInputProps>(
                     context.onSubmit(context.value);
                 }
             },
-            [context.value, context.onSubmit, isReadOnly]
+            [context, isReadOnly]
         );
 
         const onChange = React.useCallback(
@@ -468,7 +469,7 @@ const EditableInput = React.forwardRef<HTMLInputElement, EditableInputProps>(
                 context.onValueChange(event.target.value);
                 onAutosize(event.target);
             },
-            [context.onValueChange, isReadOnly, onAutosize]
+            [context, isReadOnly, onAutosize]
         );
 
         const onKeyDown = React.useCallback(
@@ -485,13 +486,7 @@ const EditableInput = React.forwardRef<HTMLInputElement, EditableInputProps>(
                     context.onSubmit(context.value);
                 }
             },
-            [
-                context.value,
-                context.onSubmit,
-                context.onCancel,
-                context.onEscapeKeyDown,
-                isReadOnly,
-            ]
+            [context, isReadOnly]
         );
 
         useIsomorphicLayoutEffect(() => {
@@ -563,7 +558,7 @@ const EditableTrigger = React.forwardRef<
     const onTrigger = React.useCallback(() => {
         if (context.disabled || context.readOnly) return;
         context.onEdit();
-    }, [context.disabled, context.readOnly, context.onEdit]);
+    }, [context]);
 
     const TriggerPrimitive = asChild ? Slot : 'button';
 
