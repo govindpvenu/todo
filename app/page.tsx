@@ -12,11 +12,9 @@ export default async function Home() {
     redirect("/auth/login");
   }
   return (
-    // <section className="h-full mt-12  w-full max-w-lg flex-1 flex flex-col items-center  gap-4">
     <main className="mt-10 h-full  w-full max-w-lg  flex flex-col items-center  gap-4">
       <AddTask />
       <TodoList />
     </main>
-    // </section>
   );
 }

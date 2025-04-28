@@ -1,7 +1,7 @@
-import { CurrentUserAvatar } from "@/components/current-user-avatar";
 import { CircleCheckBig } from "lucide-react";
 import { ModeToggle } from "@/components/theme-toggle";
 import { LogoutButton } from "@/app/auth/_components/logout-button";
+import Profile from "./profile";
 
 export function Header() {
   return (
@@ -23,7 +23,7 @@ export function Header() {
       <div className="flex items-center gap-4">
         <LogoutButton />
         <ModeToggle />
-        <CurrentUserAvatar />
+        <Profile />
       </div>
     </nav>
   );
