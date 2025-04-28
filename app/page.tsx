@@ -3,6 +3,7 @@ import { TodoList } from "./components/TodoList";
 
 import { redirect } from "next/navigation";
 import { createClient } from "@/utils/supabase/server";
+import { Header } from "@/components/header";
 
 export default async function Home() {
   const supabase = await createClient();
@@ -12,9 +13,14 @@ export default async function Home() {
     redirect("/auth/login");
   }
   return (
-    <main className="mt-10 h-full  w-full max-w-lg  flex flex-col items-center  gap-4">
-      <AddTask />
-      <TodoList />
+    <main className="h-screen flex flex-col">
+      <Header />
+      <section className="h-full mt-2 w-full  flex-1 flex flex-col items-center justify-center  gap-4 p-6 md:p-10">
+        <main className="mt-10 h-full  w-full max-w-lg  flex flex-col items-center  gap-4">
+          <AddTask />
+          <TodoList />
+        </main>
+      </section>
     </main>
   );
 }
