@@ -1,13 +1,13 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
 export default function AddTask() {
-  return (
-    <div className="*:not-first:mt-2 max-w-lg w-full">
-      <div className="flex gap-2 w-full ">
-        <Input className="flex-1" placeholder="Add Task" type="text" />
-        <Button variant="default">Send</Button>
-      </div>
-    </div>
-  );
+    return (
+        <div className="w-full max-w-lg *:not-first:mt-2">
+            <div className="flex w-full gap-2">
+                <Input className="flex-1" placeholder="Add Task" type="text" />
+                <Button variant="default">Send</Button>
+            </div>
+        </div>
+    );
 }

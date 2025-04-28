@@ -1,33 +1,33 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
-import { poppins } from "@/constants/fonts";
-import { Wisteria } from "@/constants/fonts";
+import type { Metadata } from 'next';
+import './globals.css';
+import { ThemeProvider } from '@/components/theme-provider';
+import { poppins } from '@/constants/fonts';
+import { Wisteria } from '@/constants/fonts';
 
 export const metadata: Metadata = {
-  title: "Tutudoo",
-  description: "A simple todo app",
+    title: 'Tutudoo',
+    description: 'A simple todo app',
 };
 
 export default function RootLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${Wisteria.className}  ${Wisteria.className}${poppins.className}  antialiased`}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en" suppressHydrationWarning>
+            <body
+                className={`${Wisteria.className} ${Wisteria.className}${poppins.className} antialiased`}
+            >
+                <ThemeProvider
+                    attribute="class"
+                    defaultTheme="light"
+                    enableSystem
+                    disableTransitionOnChange
+                >
+                    {children}
+                </ThemeProvider>
+            </body>
+        </html>
+    );
 }
